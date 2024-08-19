@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;800&display=swap');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+:root {
+  font-family: 'inter', sans-serif;
+}
+
+.container {
+  max-width: 60rem;
+}
+
+@layer components {
+  .inner-content {
+    /* Define your styles here */
+  }
+
+  .custom_background {
+    @apply relative p-5 h-full inner-content rounded-[1.5rem] bg-[#05072d] border-white/15 before:rounded-[1.5rem] before:absolute before:inset-0 before:border-t before:border-white  before:border-white/20 before:bg-gradient-to-b before:from-white/10 before:to-transparent before:shadow before:shadow-gray-950;
+  }
+
+  .custom_button {
+    @apply relative px-5 py-2 inline-flex items-center gap-2 w-full h-full text-white text-sm focus-within:ring-2 focus-within:ring-transparent hover:ring-1 hover:ring-orange-400 rounded-full bg-gradient-to-r from-[#c8278d] to-orange-500 border-white/15 before:rounded-[1rem] before:absolute before:inset-0 before:border-t before:border-white before:border-white/20 before:bg-gradient-to-b before:from-white/10 before:to-transparent before:shadow before:shadow-gray-950;
+  }
+
+  p {
+    @apply text-sm text-white/60;
+  }
+
+  h3,
+  h4 {
+    @apply text-xl text-white font-bold;
+  }
+}
